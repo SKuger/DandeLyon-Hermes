@@ -256,6 +256,20 @@ No network, no keys, no Redis — CI runs the same command.
 | `KNOWLEDGE_DIR` | defaults to `knowledge/` |
 | `REDIS_URL` | state lives in process memory |
 
+## Branches
+
+`main` is what would be in production. `develop` is where changes land and
+are tested.
+
+Work happens on `develop` — directly for small changes, on a branch off it
+for anything larger. CI runs on both, so nothing reaches `develop` without
+the suite and the linter passing. Releasing is a pull request from
+`develop` into `main`, which is protected: no direct pushes, no force
+pushes, and both CI jobs have to be green before it can merge.
+
+The point is that `main` is never a place where something is being tried
+out. If it is on `main`, it survived `develop` first.
+
 ## Layout
 
 ```
