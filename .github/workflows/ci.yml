@@ -27,3 +27,24 @@ jobs:
       # here, which is how we know they are genuinely optional.
       - run: pytest -q
 
+  extras:
+    name: optional runtimes
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      # Installed together on purpose. The optional runtimes bring their
+      # own web stack, and a version conflict with FastAPI is exactly the
+      # kind of breakage that only appears when someone installs both
+      # into one environment — which they will.
+      - run: |
+          pip install -r requirements-dev.txt \
+                      -r requirements-langgraph.txt \
+                      -r requirements-mcp.txt
+
+      - run: pytest -q
