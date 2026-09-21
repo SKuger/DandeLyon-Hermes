@@ -1,0 +1,4 @@
+# Optional: exposes the tools over the Model Context Protocol.
+# Not in requirements.txt on purpose — the bot does not need it to run.
+-r requirements.txt
+mcp==2.2.0
