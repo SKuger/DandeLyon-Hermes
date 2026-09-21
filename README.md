@@ -1,6 +1,6 @@
 # DandeLyon Hermes
 
-[![CI](https://github.com/SKuger/DandeLyon-Hermes/actions/workflows/ci.yml/badge.svg)](https://github.com/SKuger/DandeLyon-Hermes/actions/workflows/ci.yml)
+[![CI](https://github.com/SKuger/DandeLyon-Hermes/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/SKuger/DandeLyon-Hermes/actions/workflows/ci.yml)
 
 **Omnichannel messaging bot: WhatsApp, Instagram and Messenger.**
 
