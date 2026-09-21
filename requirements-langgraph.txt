@@ -1,0 +1,5 @@
+# Optional: the LangGraph implementation of the agent runtime.
+# Not in requirements.txt on purpose — the default path runs without it.
+-r requirements.txt
+langgraph==1.2.12
+langchain-anthropic==1.7.2
